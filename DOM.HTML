@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="container">
+  <h1 id="title">Belajar DOM JS</h1>
+  <p id="description">Ini adalah paragraf contoh.</p>
+  <button id="changeText">Ubah Paragraf</button>
+</div>
+
+<script>
+  // Mengakses elemen sebagai objek DOM
+  const title = document.getElementById('title');
+  const paragraph = document.getElementById('description');
+  const button = document.getElementById('changeText');
+
+  // Mengubah property innerHTML
+  title.innerHTML = 'Belajar DOM di JavaScript';
+
+  // Menambahkan event click pada tombol
+  button.addEventListener('click', function() {
+    // Mengubah isi paragraf
+    paragraph.innerHTML = 'Paragraf ini telah diubah!';
+    // Mengubah style paragraf
+    paragraph.style.color = 'blue';
+  });
+
+  // Membuat elemen baru dan menambahkannya ke container
+  const newElement = document.createElement('p');
+  newElement.textContent = 'Ini adalah elemen baru yang ditambahkan.';
+  const container = document.getElementById('container');
+  container.appendChild(newElement);
+</script>
+
+</body>
+</html>
